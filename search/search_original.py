@@ -62,20 +62,9 @@ def tinyMazeSearch(problem):
   Returns a sequence of moves that solves tinyMaze.  For any other
   maze, the sequence of moves will be incorrect, so only use this for tinyMaze
   """
-  tmpState = problem.getStartState()
-  # print ('test', problem.getSuccessors(startState))
-  depth = 0
-  while depth < 3:
-      nextTree = problem.getSuccessors(tmpState)
-      for a, b, c in nextTree:
-          print('arr' ,a, b, c)
-      depth += 1
-
   from game import Directions
-  n = Directions.NORTH
   s = Directions.SOUTH
   w = Directions.WEST
-  e = Directions.EAST
   return  [s,s,w,s,w,w,s,w]
 
 def depthFirstSearch(problem):
